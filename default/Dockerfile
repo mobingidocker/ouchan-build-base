@@ -9,8 +9,9 @@ RUN SDK=google-cloud-sdk-298.0.0-linux-x86_64.tar.gz \
     && ./google-cloud-sdk/bin/gcloud components install kubectl \
     && curl -s https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz | tar -v -C /usr/local -xz \
     && mkdir -p /go/src /go/bin \
-    && apt-get update && apt-get install -y python3-pip python3-dev \
-    && pip3 install --user awscli
+    && apt-get update && apt-get install -y python3-pip \
+    && pip3 install --user --upgrade awscli \
+    && brew tap aws/tap && brew install aws-sam-cli
 
 ENV GOPATH /go
 ENV GOROOT /usr/local/go
