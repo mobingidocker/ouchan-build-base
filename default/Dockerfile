@@ -13,6 +13,6 @@ RUN SDK=google-cloud-sdk-298.0.0-linux-x86_64.tar.gz \
 
 ENV GOPATH /go
 ENV GOROOT /usr/local/go
-ENV PATH /usr/local/go/bin:/go/bin:/usr/local/bin:/home/linuxbrew/google-cloud-sdk/bin:$PATH
+ENV PATH /usr/local/go/bin:/go/bin:/usr/local/bin:/home/linuxbrew/google-cloud-sdk/bin:/root/.local/bin:$PATH
 
 CMD ["bash"]
