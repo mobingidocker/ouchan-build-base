@@ -7,6 +7,8 @@ RUN brew install go && brew install gcc \
     && curl -LO https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/$SDK && tar xzf $SDK \
     && ./google-cloud-sdk/install.sh --quiet && rm $SDK \
     && ./google-cloud-sdk/bin/gcloud components install kubectl \
+    && GO=go1.14.4.linux-amd64.tar.gz && curl -s https://dl.google.com/go/$GO | tar -v -C /usr/local -xz \
+    && mkdir -p /go/src /go/bin && rm $GO \
     && apt-get update && apt-get install -y python3-pip \
     && pip3 install --user --upgrade awscli \
     && brew tap aws/tap && brew install aws-sam-cli
