@@ -11,6 +11,8 @@ RUN brew install go && brew install gcc \
     && pip3 install --user --upgrade awscli \
     && brew tap aws/tap && brew install aws-sam-cli
 
-ENV PATH /home/linuxbrew/google-cloud-sdk/bin:/root/.local/bin:$PATH
+ENV GOPATH /go
+ENV GOROOT /usr/local/go
+ENV PATH /usr/local/go/bin:/go/bin:/usr/local/bin:/home/linuxbrew/google-cloud-sdk/bin:/root/.local/bin:$PATH
 
 CMD ["bash"]
