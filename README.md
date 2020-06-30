@@ -1,2 +1,2 @@
 # ouchan-build-base
-Base image for CI build in Mobingi.
+Base image for CI build in Alphaus.
