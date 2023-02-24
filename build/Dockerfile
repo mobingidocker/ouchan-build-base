@@ -6,7 +6,7 @@ RUN SDK=google-cloud-sdk-311.0.0-linux-x86_64.tar.gz; \
     curl -LO https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/$SDK && tar xzf $SDK \
     && ./google-cloud-sdk/install.sh --quiet && rm $SDK \
     && ./google-cloud-sdk/bin/gcloud components install kubectl \
-    && curl -s https://dl.google.com/go/go1.18.3.linux-amd64.tar.gz | tar -v -C /usr/local -xz \
+    && curl -s https://dl.google.com/go/go1.19.6.linux-amd64.tar.gz | tar -v -C /usr/local -xz \
     && mkdir -p /go/src /go/bin \
     && apt-get update && apt-get install -y python3-pip gcc wget \
     && pip3 install --user --upgrade awscli \
