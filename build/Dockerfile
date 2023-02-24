@@ -2,7 +2,7 @@ FROM linuxbrew/brew:latest
 
 MAINTAINER Alphaus <dev@mobingi.com>
 
-RUN SDK=google-cloud-sdk-311.0.0-linux-x86_64.tar.gz; \
+RUN SDK=google-cloud-sdk-419.0.0-linux-x86_64.tar.gz; \
     curl -LO https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/$SDK && tar xzf $SDK \
     && ./google-cloud-sdk/install.sh --quiet && rm $SDK \
     && ./google-cloud-sdk/bin/gcloud components install kubectl \
