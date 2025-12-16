@@ -1,4 +1,4 @@
-FROM linuxbrew/brew:latest
+FROM homebrew/brew:4.6.20
 
 MAINTAINER Alphaus <dev@mobingi.com>
 
