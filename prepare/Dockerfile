@@ -4,5 +4,5 @@ RUN curl -s https://dl.google.com/go/go1.25.5.linux-amd64.tar.gz | sudo tar -v -
     && sudo apt-get update && sudo apt-get install -y gcc && mkdir /home/linuxbrew/go/
 ENV GOPATH=/home/linuxbrew/go
 ENV GOROOT=/usr/local/go
-ENV PATH=/usr/local/go/bin:/go/bin:/usr/local/bin:/home/linuxbrew/google-cloud-sdk/bin:/root/.local/bin:$PATH
+ENV PATH=/usr/local/go/bin:/go/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 CMD ["bash"]

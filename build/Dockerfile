@@ -1,5 +1,4 @@
 FROM homebrew/brew:4.6.20
-
 RUN SDK=google-cloud-sdk-549.0.1-linux-x86_64.tar.gz; \
     curl -LO https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/$SDK && tar xzf $SDK \
     && ./google-cloud-sdk/install.sh --quiet && rm $SDK \
@@ -11,6 +10,6 @@ RUN SDK=google-cloud-sdk-549.0.1-linux-x86_64.tar.gz; \
     && brew tap aws/tap && brew install aws-sam-cli
 ENV GOPATH=/go
 ENV GOROOT=/usr/local/go
-ENV PATH=/home/linuxbrew/.linuxbrew/opt/python@3.7/bin:/usr/local/go/bin:/go/bin:/usr/local/bin:/home/linuxbrew/google-cloud-sdk/bin:/root/.local/bin:$PATH
+ENV PATH=/home/linuxbrew/.linuxbrew/opt/python@3.7/bin:/usr/local/go/bin:/go/bin:/usr/local/bin:/home/linuxbrew/google-cloud-sdk/bin:$HOME/.local/bin:$PATH
 RUN echo "$HOME" && brew --version && python3 --version && aws --version && sam --version
 CMD ["bash"]
